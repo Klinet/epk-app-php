@@ -17,18 +17,20 @@ class HallgatoModel implements HallgatoInterface
         $this->tobbletpontok = $tobbletpontok;
     }
 
-    public function getSelectedProgram(): \App\Models\SzakModel
+    public function szamolAlappontok(): int
     {
-        return $this->valasztottSzak;
+        // TODO: Alappontok számítása
+        return 0;
     }
 
-    public function getExamResults(): array
+    public function szamolTobbletpontok(): int
     {
-        return $this->erettsegiEredmenyek;
+        // TODO: Többletpontok számítása
+        return 0;
     }
 
-    public function getExtraPoints(): array
+    public function szamolVegsoPontszam(): int
     {
-        return $this->tobbletpontok;
+        return $this->szamolAlappontok() + $this->szamolTobbletpontok();
     }
 }

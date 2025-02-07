@@ -2,31 +2,33 @@
 
 namespace Akali\EpkAppPhp\Models;
 
-class EredmenyModel
+use Akali\EpkAppPhp\Interfaces\EredmenyInterface;
+
+class EredmenyModel implements EredmenyInterface
 {
-    private string $nev;
-    private string $tipus;
-    private int $eredmeny;
+    private string $targyNeve;
+    private string $erettsegiTipus;
+    private int $eredmenySzazalek;
 
-    public function __construct(string $nev, string $tipus, int $eredmeny)
+    public function __construct(string $targyNeve, string $erettsegiTipus, int $eredmenySzazalek)
     {
-        $this->nev = $nev;
-        $this->tipus = $tipus;
-        $this->eredmeny = $eredmeny;
+        $this->targyNeve = $targyNeve;
+        $this->erettsegiTipus = $erettsegiTipus;
+        $this->eredmenySzazalek = $eredmenySzazalek;
     }
 
-    public function getSubjectName(): string
+    public function getTargyNeve(): string
     {
-        return $this->nev;
+        return $this->targyNeve;
     }
 
-    public function getExamType(): string
+    public function getErettsegiTipus(): string
     {
-        return $this->tipus;
+        return $this->erettsegiTipus;
     }
 
-    public function getPercentage(): int
+    public function getEredmenySzazalek(): int
     {
-        return $this->eredmeny;
+        return $this->eredmenySzazalek;
     }
 }
