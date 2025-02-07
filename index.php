@@ -4,6 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Akali\EpkAppPhp\Controllers\PontszamController;
 use Akali\EpkAppPhp\Services\PontszamKalkulatorService;
+use function Akali\EpkAppPhp\Helpers\pretty_var_export;
 
 // Beolvassuk a hallgatói adatokat
 $file = __DIR__ . '/src/data/homework_input.php';
@@ -14,6 +15,8 @@ if (!file_exists($file)) {
 }
 
 $hallgatokData = require $file;
+
+pretty_var_export($hallgatokData);
 
 // Inicializáljuk a pontszámkalkulátor szolgáltatást
 $kalkulatorService = new PontszamKalkulatorService();
