@@ -5,7 +5,11 @@
     "autoload": {
         "psr-4": {
             "Akali\\EpkAppPhp\\": "src/"
-        }
+        },
+        "files": [
+            "src/Helpers/DebugHelper.php",
+            "src/Helpers/PontszamFormatHelper.php"
+        ]
     },
     "authors": [
         {

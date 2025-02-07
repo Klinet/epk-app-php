@@ -16,7 +16,19 @@ if (!file_exists($file)) {
 
 $hallgatokData = require $file;
 
-pretty_var_export($hallgatokData);
+$a = array (
+    'foo' => 'bar',
+    'baz' =>
+        array (
+            0 => 1,
+            1 => 2,
+            2 => 3,
+        ),
+);
+
+
+$data = ['key' => 'value'];
+pretty_var_export($data);
 
 // Inicializáljuk a pontszámkalkulátor szolgáltatást
 $kalkulatorService = new PontszamKalkulatorService();
