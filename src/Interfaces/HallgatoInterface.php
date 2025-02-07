@@ -2,13 +2,13 @@
 
 namespace Akali\EpkAppPhp\Interfaces;
 
-use App\Models\SzakModel;
+namespace Akali\EpkAppPhp\Interfaces;
 
 interface HallgatoInterface
 {
-    public function getSelectedProgram(): SzakModel;
+    public function szamolAlappontok(): int;
 
-    public function getExamResults(): array;
+    public function szamolTobbletpontok(): int;
 
-    public function getExtraPoints(): array;
+    public function szamolVegsoPontszam(): int;
 }

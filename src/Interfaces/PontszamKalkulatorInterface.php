@@ -2,13 +2,13 @@
 
 namespace Akali\EpkAppPhp\Interfaces;
 
-use App\Models\HallgatoInterface;
+use Akali\EpkAppPhp\Models\HallgatoModel;
 
 interface PontszamKalkulatorInterface
 {
-    public function calculateBasePoints(HallgatoInterface $hallgato): int;
+    public function szamolAlappontok(HallgatoModel $hallgato): int;
 
-    public function calculateExtraPoints(HallgatoInterface $hallgato): int;
+    public function szamolTobbletpontok(HallgatoModel $hallgato): int;
 
-    public function calculateTotalPoints(HallgatoInterface $hallgato): int;
+    public function szamolVegsoPontszam(HallgatoModel $hallgato): int;
 }
