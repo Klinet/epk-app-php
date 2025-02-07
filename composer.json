@@ -1,0 +1,17 @@
+{
+    "name": "akali/epk-app-php",
+    "description": "egyszerusitett pontszamitas kalkulator",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Akali\\EpkAppPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Klinet",
+            "email": "akali.klinet@gmail.com"
+        }
+    ],
+    "require": {}
+}
