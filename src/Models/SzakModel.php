@@ -2,7 +2,9 @@
 
 namespace Akali\EpkAppPhp\Models;
 
-class SzakModel
+use Akali\EpkAppPhp\Interfaces\SzakInterface;
+
+class SzakModel implements SzakInterface
 {
     private string $egyetem;
     private string $kar;
@@ -15,18 +17,19 @@ class SzakModel
         $this->szak = $szak;
     }
 
-    public function getUniversity(): string
+    public function getEgyetem(): string
     {
         return $this->egyetem;
     }
 
-    public function getFaculty(): string
+    public function getKar(): string
     {
         return $this->kar;
     }
 
-    public function getProgram(): string
+    public function getSzak(): string
     {
         return $this->szak;
     }
 }
+

@@ -2,7 +2,9 @@
 
 namespace Akali\EpkAppPhp\Models;
 
-class PontszamKalkulatorModel
+use Akali\EpkAppPhp\Interfaces\PontszamKalkulatorInterface;
+
+class PontszamKalkulatorModel implements PontszamKalkulatorInterface
 {
 
     public function szamolAlappontok(HallgatoModel $hallgato): int
