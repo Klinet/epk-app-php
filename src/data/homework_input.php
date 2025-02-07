@@ -49,7 +49,7 @@ $exampleData = [
 ];
 
 // output: 476 (376 alappont + 100 többletpont)
-$exampleData = [
+$exampleData1 = [
     'valasztott-szak' => [
         'egyetem' => 'ELTE',
         'kar' => 'IK',
@@ -186,3 +186,7 @@ $exampleData3 = [
         ],
     ],
 ];
+
+// Összes adat visszaadása egy tömbben
+// vagy exampleData[1] index szerint kérem
+return [$exampleData, $exampleData1, $exampleData2, $exampleData3];
