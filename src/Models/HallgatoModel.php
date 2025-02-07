@@ -17,7 +17,7 @@ class HallgatoModel implements HallgatoInterface
         $this->tobbletpontok = $tobbletpontok;
     }
 
-    public function getSelectedProgram(): SzakModel
+    public function getSelectedProgram(): \App\Models\SzakModel
     {
         return $this->valasztottSzak;
     }
