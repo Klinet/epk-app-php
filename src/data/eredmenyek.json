@@ -1,0 +1,72 @@
+[
+    [
+        {
+            "azonositok": {
+                "Oktat\u00e1si azonos\u00edt\u00f3": "11111111111",
+                "OM k\u00f3d": "111111"
+            },
+            "nev": "Programtervez\u0151 informatikus",
+            "egyetem": "ELTE",
+            "kar": "IK",
+            "alappontok": 370,
+            "tobbletpontok": 100,
+            "vegsoPontszam": 470
+        }
+    ],
+    [
+        {
+            "azonositok": {
+                "Oktat\u00e1si azonos\u00edt\u00f3": "22222222222",
+                "OM k\u00f3d": "222222"
+            },
+            "nev": "Programtervez\u0151 informatikus",
+            "egyetem": "ELTE",
+            "kar": "IK",
+            "alappontok": 376,
+            "tobbletpontok": 100,
+            "vegsoPontszam": 476
+        }
+    ],
+    [
+        {
+            "azonositok": {
+                "Oktat\u00e1si azonos\u00edt\u00f3": "33333333333",
+                "OM k\u00f3d": "333333"
+            },
+            "nev": "Programtervez\u0151 informatikus",
+            "egyetem": "ELTE",
+            "kar": "IK",
+            "alappontok": 0,
+            "tobbletpontok": 100,
+            "vegsoPontszam": 100
+        }
+    ],
+    [
+        {
+            "azonositok": {
+                "Oktat\u00e1si azonos\u00edt\u00f3": "44444444444",
+                "OM k\u00f3d": "444444"
+            },
+            "nev": "Programtervez\u0151 informatikus",
+            "egyetem": "ELTE",
+            "kar": "IK",
+            "alappontok": 0,
+            "tobbletpontok": 100,
+            "vegsoPontszam": 100
+        }
+    ],
+    [
+        {
+            "azonositok": {
+                "Oktat\u00e1si azonos\u00edt\u00f3": "55555555555",
+                "OM k\u00f3d": "555555"
+            },
+            "nev": "Anglisztika",
+            "egyetem": "ELTE",
+            "kar": "BTK",
+            "alappontok": 0,
+            "tobbletpontok": 100,
+            "vegsoPontszam": 100
+        }
+    ]
+]
