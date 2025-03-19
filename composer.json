@@ -8,7 +8,8 @@
         },
         "files": [
             "src/Helpers/DebugHelper.php",
-            "src/Helpers/PontszamFormatHelper.php"
+            "src/Helpers/PontszamFormatHelper.php",
+            "src/Helpers/StringHelper.php"
         ]
     },
     "authors": [

@@ -4,49 +4,37 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Akali\EpkAppPhp\Controllers\PontszamController;
 use Akali\EpkAppPhp\Services\PontszamKalkulatorService;
-use function Akali\EpkAppPhp\Helpers\pretty_var_export;
 
-// Beolvassuk a hallgatói adatokat
-$file = __DIR__ . '/src/data/homework_input.php';
+// Hallgatói adatok állományának elérési útja
+//$file = __DIR__ . '/src/data/homework_input.php';
+$file = __DIR__ . '/src/data/homework_input_enhanced.php';
 
+// Ellenőrzi, hogy létezik-e a fájl, ha nem, hibát jelez és leállítja a programot
 if (!file_exists($file)) {
     echo "Hiba: Nem található a homework_input.php fájl." . PHP_EOL;
     exit(1);
 }
 
-$hallgatokData = require $file;
+// Beolvassa a hallgatói adatokat tartalmazó fájlt és egy tömbbe tölti azokat
+$hallgatoiAdatTombbok = require $file;
 
-$a = array (
-    'foo' => 'bar',
-    'baz' =>
-        array (
-            0 => 1,
-            1 => 2,
-            2 => 3,
-        ),
-);
-
-
-$data = ['key' => 'value'];
-pretty_var_export($data);
-
-// Inicializáljuk a pontszámkalkulátor szolgáltatást
+// Létrehozza a pontszámkalkulációért felelős szolgáltatás példányát
 $kalkulatorService = new PontszamKalkulatorService();
+// Létrehozza a kontroller példányát a kalkulátor szolgáltatás átadásával
+$pontszamController = new PontszamController($kalkulatorService);
 
-// Inicializáljuk a controllert
-$controller = new PontszamController($kalkulatorService);
-
-// Feldolgozzuk az összes hallgatót
+// Az eredmények tárolására szolgáló tömb
 $eredmenyek = [];
 
-foreach ($hallgatokData as $hallgato) {
-    $eredmenyek[] = $controller->processHallgatok([$hallgato]);
+// Végigmegy a hallgatói adatok tömbjén, és minden hallgatóhoz meghívja a feldolgozási metódust
+foreach ($hallgatoiAdatTombbok as $hallgato) {
+    $eredmenyek[] = $pontszamController->feldolgozasHallgatok([$hallgato]);
 }
 
-// Kiírjuk az eredményeket
-print_r($eredmenyek);
+// !Kiírja a konzolra a feldolgozott eredményeket -- a szervízben írom ki a ciklusban
+//print_r($eredmenyek);
 
-// Elmentjük az eredményeket JSON fájlba
-$controller->saveResults($eredmenyek);
+// Elmenti az eredményeket JSON fájlba
+$pontszamController->saveResults($eredmenyek);
 
 echo "Pontszámítás befejezve. Az eredmények elmentve az eredmenyek.json fájlba." . PHP_EOL;

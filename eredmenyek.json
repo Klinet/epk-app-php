@@ -1,0 +1,16 @@
+[
+    [
+        {
+            "azonositok": {
+                "Oktat\u00e1si azonos\u00edt\u00f3": "1234567891",
+                "OM k\u00f3d": "123451"
+            },
+            "nev": "Programtervez\u0151 informatikus",
+            "egyetem": "ELTE",
+            "kar": "IK",
+            "alappontok": 320,
+            "tobbletpontok": 100,
+            "vegsoPontszam": 420
+        }
+    ]
+]

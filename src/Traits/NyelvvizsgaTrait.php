@@ -22,11 +22,10 @@ trait NyelvvizsgaTrait {
     }
 
     public function pontszamNyelvvizsga(): int {
-        if ($this->tipus === 'B2') {
-            return 28;
-        } elseif ($this->tipus === 'C1') {
-            return 40;
-        }
-        return 0;
+        return match ($this->tipus) {
+            'B2' => 28,
+            'C1' => 40,
+            default => 0,
+        };
     }
 }
